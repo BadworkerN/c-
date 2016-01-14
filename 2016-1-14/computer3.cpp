@@ -24,11 +24,24 @@ class computer
 			cout<<"~computer"<<endl;
 			delete []pbrand_;
 		}
-		
+
 		computer(const computer &rhs):fprice_(rhs.fprice_)
-		{
-			pbrand_=new char[strlen(rhs.pbrand_)+1];
-			strcpy(pbrand_,rhs.pbrand_);
+	{
+		pbrand_=new char[strlen(rhs.pbrand_)+1];
+		strcpy(pbrand_,rhs.pbrand_);
+	}
+
+		computer &  operator = (computer &rhs) //:fprice_(rhs.fprice_)
+		{	
+			if(this==&rhs)
+				return *this;
+			else{
+				delete []pbrand_;
+				pbrand_=new char[strlen(rhs.pbrand_)+1];
+				strcpy(pbrand_,rhs.pbrand_);
+				fprice_=rhs.fprice_;
+				return *this;
+				}
 		}
 
 		void print()
@@ -44,7 +57,11 @@ class computer
 int main(void)
 {
 	computer p("filco",1000);
-	computer p1(p);
+	computer p1=p;
 	p.print();
 	p1.print();
+
+	computer p2("bmw000000",100000);
+	p2=p1;
+	p2.print();
 }
