@@ -17,7 +17,6 @@ public:
 		String(const String & rhs);
 		String & operator=(const String &rhs);
 		~String();
-		//char &operator[](size_t idx);
 		friend ostream & operator <<(ostream &os ,const String &rhs);
 		size_t use()
 		{
@@ -35,7 +34,6 @@ private:
 		public:
 			CharProxy(String & str,size_t idx);
 			CharProxy &operator = (char c);
-//			friend ostream & operator<<(ostream & os ,CharProxy &cp);
 			operator char() const;
 		private:
 			String & thestring_;
@@ -88,25 +86,6 @@ String::~String()
 }
 
 
-/* char & String::operator[](size_t idx)
-{
-	static char nullchar='\0';
-	if(idx>=0 && idx<=strlen(pstr_))
-	{
-		char * tmp=pstr_;
-		tmp=new char[strlen(pstr_)+2];
-		strcpy(tmp,pstr_);
-		tmp[strlen(tmp)+1]=1;
-		if(--pstr_[strlen(pstr_)+1]==0)
-				delete []pstr_;
-		pstr_=tmp;	
-		return pstr_[idx];
-
-	}
-	else 
-		return nullchar;
-}
-*/
 ostream & operator <<(ostream &os ,const String &rhs)
 {
 	os<<rhs.pstr_;
@@ -194,4 +173,5 @@ int main(void)
 
 	return 0;
 }
+
 

@@ -1,0 +1,2 @@
+2016-02-21 05:16:11,289: INFO  ;mylog create success
+2016-02-21 05:16:11,289: ERROR  ;herllo
