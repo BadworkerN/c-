@@ -1,2 +1,16 @@
 2016-02-21 05:16:11,289: INFO  ;mylog create success
 2016-02-21 05:16:11,289: ERROR  ;herllo
+2016-02-22 05:30:20,070: INFO  ;mylog create success
+2016-02-22 05:30:20,071: ERROR  ;herllo
+2016-02-22 05:36:46,216: INFO  ;mylog create success
+2016-02-22 05:36:46,222: ERROR  ;herllo
+2016-02-22 05:40:28,704: INFO  ;mylog create success
+2016-02-22 05:40:28,704: ERROR  ;herllo
+2016-02-22 06:04:26,199: INFO  ;mylog create success
+2016-02-22 06:04:26,200: ERROR  ;herllo
+2016-02-22 06:04:26,200: ERROR  ;hello,world[testlog.cpp:main:29]
+2016-02-22 06:14:54,719: INFO  ;mylog create success
+2016-02-22 06:14:54,720: ERROR  ;herllo
+2016-02-22 06:14:54,720: ERROR  ;hello,world[testlog.cpp:main:19]
+2016-02-22 06:47:44,990: INFO  ;mylog create success
+2016-02-22 06:47:44,991: ERROR  ;hello,world[testlog.cpp:main:18]

@@ -7,8 +7,21 @@
 
 #ifndef _MYLOG_H
 #define _MYLOG_H
-
 #include<log4cpp/Category.hh>
+
+
+using namespace std;
+inline string int2string(int line)
+{
+	ostringstream os;
+	os<<line;
+	return os.str();
+}
+
+#define postfix(msg) string(msg).append("[").append(__FILE__).append(":").append(__func__).append(":").append(int2string(__LINE__)).append("]").c_str()
+
+
+
 
 enum Priority
 {
@@ -25,7 +38,7 @@ private:
 	Mylog();
 	log4cpp::Category &catref_;
 public:
-	static Mylog *getInstance();
+	static Mylog &getInstance();
 	static void destroy();
 	void setPriority(Priority priority);
 	void error(const char *msg);
@@ -33,5 +46,11 @@ public:
 	void debug(const char *msg);
 	void info(const char *msg);
 };
+
+#ifndef LOG4CPP
+Mylog &log=Mylog::getInstance();
+#else
+extern Mylog &log;
+#endif
 
 #endif

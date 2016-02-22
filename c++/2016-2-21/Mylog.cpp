@@ -16,13 +16,13 @@ using namespace std;
 Mylog* Mylog::plog_=NULL;
 
 
-Mylog* Mylog::getInstance()
+Mylog& Mylog::getInstance()
 {
 	if(plog_==NULL)
 	{
 		plog_=new Mylog;
 	}
-	return plog_;
+	return *plog_;
 }
 
 void Mylog::destroy()
