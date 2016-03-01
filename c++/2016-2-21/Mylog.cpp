@@ -27,6 +27,7 @@ Mylog& Mylog::getInstance()
 
 void Mylog::destroy()
 {
+	plog_->catref_.info("mylog destory success");
 	if(plog_)
 	{
 		plog_->catref_.shutdown();

@@ -53,4 +53,11 @@ Mylog &log=Mylog::getInstance();
 extern Mylog &log;
 #endif
 
+#define LOG_ERROR(msg) log.error(postfix(msg))
+#define LOG_WARN(msg) log.warn(postfix(msg))
+#define LOG_INFO(msg) log.info(postfix(msg))
+#define LOG_DEBUG(msg) log.debug(postfix(msg))
+
+
+
 #endif

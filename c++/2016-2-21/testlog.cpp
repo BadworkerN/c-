@@ -13,13 +13,17 @@ using namespace std;
 
 int main(void)
 {
-//	Mylog &plog_=Mylog::getInstance();
-
+#if 0
+	Mylog &plog_=Mylog::getInstance();
 	log.error(postfix("hello,world"));
-
 	cout<<__FILE__<<endl;
 	cout<<__func__<<endl;
 	cout<<__LINE__<<endl;
+#endif
+	LOG_ERROR("hello,world");
+	LOG_WARN("hello,world");
+	LOG_ERROR("hello,world");
+	LOG_DEBUG("hello,world");
 
 
 
